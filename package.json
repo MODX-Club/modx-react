@@ -1,23 +1,27 @@
 {
-  "name": "modx-react",
-  "version": "1.0.1",
+  "author": {
+    "name": "Fi1osof"
+  },
+  "bugs": {
+    "url": "https://github.com/MODX-Club/modx-react/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MODX-Club/modx-react.git"
-  },
+  "homepage": "https://github.com/MODX-Club/modx-react#readme",
   "keywords": [
     "\"modx",
     "react\""
   ],
-  "author": "Fi1osof",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MODX-Club/modx-react/issues"
+  "main": "index.js",
+  "name": "modx-react",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MODX-Club/modx-react.git"
   },
-  "homepage": "https://github.com/MODX-Club/modx-react#readme"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.2"
 }

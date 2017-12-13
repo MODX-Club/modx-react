@@ -26,7 +26,25 @@ import {
 } from '../fields';
 
 
-export const UsersArgs = Object.assign({
+const args = {
+  username: {
+    type: GraphQLString,
+    description: "Поиск по юзернейму",
+  },
+};
+
+export const UserArgs = Object.assign({...args},{
+  id: {
+    type: GraphQLInt,
+  },
+  ownProfile: {
+    type: GraphQLBoolean,
+    description: "Получить текущего пользователя",
+  },
+});
+
+
+export const UsersArgs = Object.assign({...args},{
   delegatesOnly: {
     type: GraphQLBoolean,
     description: "Только представители",
