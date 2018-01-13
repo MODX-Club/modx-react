@@ -8,7 +8,10 @@ import {
   GraphQLEnumType,
   GraphQLFloat,
   GraphQLBoolean,
+  GraphQLNonNull,
 } from 'graphql';
+
+import GraphQLJSON from 'graphql-type-json';
 
 import { List } from 'immutable';
 
@@ -106,6 +109,14 @@ export const UserFields = {
     type: GraphQLInt,
     description: "Кем создана учетка пользователя",
   },
+  _isDirty: {
+    type: GraphQLJSON,
+    description: "Измененные данные",
+  },
+  _errors: {
+    type: GraphQLJSON,
+    description: "Ошибки",
+  },
 };
 
 
@@ -188,6 +199,26 @@ export const getList = (source, args, context, info) => {
   }
 
   return state;
+};
+
+
+
+
+export const Mutations = {
+  updateUser: {
+    type: UserType,
+    description: "Обновление пользователя",
+    args: {
+      id: {
+        type: new GraphQLNonNull(GraphQLInt),
+        description: "ID пользователя",
+      },
+      data: {
+        type: new GraphQLNonNull(GraphQLJSON),
+        description: "Данные пользователя",
+      }
+    },
+  },
 };
 
 
